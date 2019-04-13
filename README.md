@@ -1,6 +1,6 @@
 # To do list
-### Simple to do list feito em Vuejs para a aula de Laboratório de desenvolvimento de banco de dados V.
+#### Simple to do list feito em Vuejs para a aula de Laboratório de desenvolvimento de banco de dados V.
 
 <p align="center">
-  <img src="https://github.com/gsoare2/to-do-list/blob/master/screen.png">
+  <img src="https://github.com/gsoare2/to-do-list/blob/master/app-screen.gif">
 </p>
