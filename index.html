@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>To do list</title>
+  <!--Feather icon-->
+  <script src="https://unpkg.com/feather-icons"></script>
+  <!--Roboto font-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <!--Style css-->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <div class="header-input">
+      <div class="content-input">
+        <input
+        type="text"
+        placeholder="Type a task to do"
+        v-model="message">
+        <textarea
+          placeholder="Type the description of task"
+          v-model="description"
+          cols="69"
+          row="15">
+        </textarea>
+      </div>
+      <button
+        class="button"
+        @click="addItem"
+      >Inserir</button>
+    </div>
+
+    <ul id="list">
+      <transition-group name="bounce">
+        <li v-for="(item, index) in list" :key="item.id">
+          <div>
+            <h3>{{item.message}}</h3>
+            <h6>{{item.description}}</h6>
+          </div>
+          <button @click="removeItem(index)" class="util-button">×</button>
+        </li>
+      </transition-group>
+    </ul>
+  </div>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="index.js"></script>
+  <script>
+    feather.replace()
+  </script>
+</body>
+</html>
